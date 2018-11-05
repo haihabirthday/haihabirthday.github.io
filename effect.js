@@ -24,6 +24,7 @@ $('document').ready(function(){
 		$('#bulb_pink').addClass('bulb-glow-pink');
 		$('#bulb_orange').addClass('bulb-glow-orange');
 		$('body').addClass('peach');
+		$('#avt').toggleClass('avatar avatar_show');
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#play').fadeIn('slow');
 		});
@@ -121,10 +122,12 @@ $('document').ready(function(){
 		
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
+			$('#avt').toggleClass('avatar_show avatar_rotate');
 		});
 	});	
 
 	$('#cake_fadein').click(function(){
+		$('#avt').toggleClass('avatar_rotate avatar_hide');
 		$('.cake').fadeIn('slow');
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#light_candle').fadeIn('slow');
